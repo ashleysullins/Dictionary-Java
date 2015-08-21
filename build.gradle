@@ -38,3 +38,5 @@ heroku {
     //set this on first run if you don't want a generated name
     appName = 'dictionary-java'
 }
+
+task stage(dependsOn: ['clean', 'installApp'])

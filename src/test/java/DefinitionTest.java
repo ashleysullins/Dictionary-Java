@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -20,7 +20,7 @@ public class DefinitionTest {
   @Test
   public void getCreateAt_instantiatesWithCurrentTime_today() {
     Definition myDefinition = new Definition("A resource that lists words and their meanings");
-    assertEquals(LocalDateTime.now().getDayOfWeek(), myDefinition.getCreatedAt().getDayOfWeek());
+    assertEquals(LocalDate.now().getDayOfWeek(), myDefinition.getCreatedAt().getDayOfWeek());
   }
 
   @Test

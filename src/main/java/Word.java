@@ -18,11 +18,11 @@ public class Word {
   }
 
   public int getId() {
-  return mId;
+    return mId;
   }
 
   public ArrayList<Definition> getDefinitions() {
-  return mDefinitions;
+    return mDefinitions;
   }
 
   public void addDefinition(Definition Definition) {
@@ -30,7 +30,7 @@ public class Word {
   }
 
   public static ArrayList<Word> all() {
-  return occurence;
+    return occurence;
   }
 
   public static Word find(int id) {

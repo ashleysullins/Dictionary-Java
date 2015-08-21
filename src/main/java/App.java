@@ -20,7 +20,7 @@ public class App {
     
     post("/word", (request, response) -> {
       Map<String, Object> model = new HashMap<String,Object>();
-      model.put("template", "templates/home.vtl");
+      model.put("template", "templates/word-success.vtl");
       String name = request.queryParams("newWord");
       Word newWord = new Word(name);
       model.put("word", name); 
@@ -40,7 +40,7 @@ public class App {
     
     post("/definition", (request, response) -> {
       Map<String, Object> model = new HashMap<String,Object>();
-      model.put("template", "templates/word.vtl");
+      model.put("template", "templates/definition-success.vtl");
       Word word = Word.find(Integer.parseInt(request.queryParams("wordId")));
       String information = request.queryParams("newDefinition");
       Definition newDefinition = new Definition(information);

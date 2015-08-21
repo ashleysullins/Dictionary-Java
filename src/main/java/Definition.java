@@ -23,7 +23,7 @@ public class Definition {
   }
 
   public LocalDate getCreatedAt() {
-  return mCreatedAt;
+    return mCreatedAt;
   }
 
   public static ArrayList<Definition> all() {

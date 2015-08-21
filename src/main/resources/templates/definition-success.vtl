@@ -4,13 +4,17 @@
   <h2> Word not found in the Suburban Dictionary! Want to <a href="/">add it</a>? </h2>
 #end
 
+<div class="alert alert-success">
+  You've successfully added a new definition. Props to you!
+</div>
+
 #foreach( $definition in $word.getDefinitions() )
   <h3>What's does $word.getName() mean anyway?</h3>
   <h4><a href="/definition/$definition.getId()">$definition.getInformation()</a></h4>
 #end
 
 <h4>Tell me what this word means to you.</h4>
-  
+
 <form action='/definition' method='post'>
   <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
   
@@ -18,6 +22,6 @@
     <textarea id="newDefinition" name="newDefinition" class="form-control" required="true" rows="3" placeholder="Add your definition here"></textarea>
   </div>
   
-    <button type="submit" class="btn btn-info">Click to submit</button>
-    <a class="btn btn-primary" href="/" role="button">Go Back to Dictionary</a>      
+  <button type="submit" class="btn btn-info">Click to submit</button>
+  <a class="btn btn-primary" href="/" role="button">Go Back to Dictionary</a>    
 </form>    

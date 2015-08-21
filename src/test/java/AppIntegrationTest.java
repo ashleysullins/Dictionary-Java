@@ -33,17 +33,17 @@ public class AppIntegrationTest extends FluentTest {
   }
 
   @Test
-  public void definitionIsAddedToWord() {
+  public void definitionIsAddedToWordTest() {
     goTo("http://localhost:4567/");
     fill("#newWord").with("Dictionary");
     submit(".btn");
+    goTo("http://localhost:4567/word/1");
     assertThat(pageSource()).contains("Dictionary");
-  //  click("a", withText("Dictionary"));
-  //  fill("#newDefinition").with("A resource that lists words and their meanings");
-  //  submit(".btn");
-  //  assertThat(pageSource()).contains("A resource that lists words and their meanings");
-  //  click("a", withText("A resource that lists words and their meanings"));
-  //  assertThat(pageSource()).contains("A resource that lists words and their meanings");
+    assertThat(pageSource()).contains("Add your definition here");
+    fill("#newDefinition").with("A resource that lists words and their meanings");
+    assertThat(pageSource()).contains("Click to submit");
+    submit(".btn btn-info");
+    assertThat(pageSource()).contains("A resource that lists words and their meanings");
   }
   
 }
