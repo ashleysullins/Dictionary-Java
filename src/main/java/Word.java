@@ -4,11 +4,13 @@ public class Word {
   private String mName;
   private static ArrayList<Word> occurence = new ArrayList<Word>();
   private int mId;
+  private ArrayList<Definition> mDefinitions;
 
   public Word(String name) {
     mName = name;
     occurence.add(this);
     mId = occurence.size();
+    mDefinitions = new ArrayList<Definition>();
   }
 
   public String getName() {
@@ -17,6 +19,14 @@ public class Word {
 
   public int getId() {
   return mId;
+  }
+
+  public ArrayList<Definition> getDefinitions() {
+  return mDefinitions;
+  }
+
+  public void addDefinition(Definition Definition) {
+    mDefinitions.add(Definition);
   }
 
   public static ArrayList<Word> all() {
