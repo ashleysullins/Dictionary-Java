@@ -1,8 +1,23 @@
-<h1>Header Goes Here</h1>
-<form action='/results' method='get'>
+<h1>Suburban Dictionary</h1>
+
+<h3>Words that will enhance your mediocre existence.</h3>
+
+#if($word)
+  <h4>Words of the Week</h4>
+#else
+  <p></p>
+#end
+
+#foreach($word in $words)
+  <ol>
+  <a href="/word/$word.getId()">$word.getName()</a>
+  </ol>
+#end
+
+<form action='/word' method='post'>
   <div class="form-group">
-    <input id="form_id" name="form_name" class="form-control" type="text">
+    <input id="newWord" name="newWord" class="form-control" type="text">
   </div>
 
-      <button type="submit" class="btn btn-info">Submit!</button>
+      <button type="submit" class="btn btn-info">Click to add word</button>
 </form>

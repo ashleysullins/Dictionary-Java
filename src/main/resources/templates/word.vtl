@@ -1,0 +1,23 @@
+#if($word)
+  <h1>$word.getName()</h1>
+#else
+  <h2> Word not found in the Suburban Dictionary! Want to <a href="/">add it</a>? </h2>
+#end
+
+#if($definition)
+  #foreach( $definition in $word.getDefinitions() )
+    <h3>$definition.getInformation()</a></h3>
+  #end
+#else
+    <p>There's no definition for this word yet! Add one below.</p>
+#end
+  
+<form action='/definition' method='post'>
+  <div class="form-group">
+    <input id="newDefinition" name="newDefinition" class="form-control" type="text">
+  </div>
+      <button type="submit" class="btn btn-info">Click to add Definition</button>
+</form>    
+
+
+
