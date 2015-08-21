@@ -3,6 +3,9 @@ import org.junit.ClassRule;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import static org.fluentlenium.core.filter.FilterConstructor.*;
+import java.util.concurrent.TimeUnit;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,45 +24,26 @@ public class AppIntegrationTest extends FluentTest {
   assertThat(pageSource()).contains("Suburban Dictionary");
   }
 
-  // @Test
-  // public void categoryIsCreatedTest() {
-  //   goTo("http://localhost:4567/");
-  //   click("a", withText("Add a New Category"));
-  //   fill("#name").with("Household chores");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Your category has been saved.");
-  // }
-  // 
-  // @Test
-  // public void categoryIsDisplayedTest() {
-  //   goTo("http://localhost:4567/categories/new");
-  //   fill("#name").with("Household chores");
-  //   submit(".btn");
-  //   click("a", withText("View all"));
-  //   assertThat(pageSource()).contains("Household chores");
-  // }
-  // 
-  // @Test
-  // public void categoryTasksFormIsDisplayed() {
-  //   goTo("http://localhost:4567/categories/new");
-  //   fill("#name").with("Shopping");
-  //   submit(".btn");
-  //   click("a", withText("View all"));
-  //   click("a", withText("Shopping"));
-  //   click("a", withText("Add a new task"));
-  //   assertThat(pageSource()).contains("Add a task to Shopping");
-  // }
-  // 
-  // @Test
-  // public void tasksIsAddedAndDisplayed() {
-  //   goTo("http://localhost:4567/categories/new");
-  //   fill("#name").with("Banking");
-  //   submit(".btn");
-  //   click("a", withText("View all"));
-  //   click("a", withText("Banking"));
-  //   click("a", withText("Add a new task"));
-  //   fill("#description").with("Deposit paycheck");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Deposit paycheck");
-  // }
+  @Test
+  public void wordIsAddedTest() {
+    goTo("http://localhost:4567/");
+    fill("#newWord").with("Dictionary");
+    submit(".btn");
+    assertThat(pageSource()).contains("Dictionary");
+  }
+
+  @Test
+  public void definitionIsAddedToWord() {
+    goTo("http://localhost:4567/");
+    fill("#newWord").with("Dictionary");
+    submit(".btn");
+    assertThat(pageSource()).contains("Dictionary");
+  //  click("a", withText("Dictionary"));
+  //  fill("#newDefinition").with("A resource that lists words and their meanings");
+  //  submit(".btn");
+  //  assertThat(pageSource()).contains("A resource that lists words and their meanings");
+  //  click("a", withText("A resource that lists words and their meanings"));
+  //  assertThat(pageSource()).contains("A resource that lists words and their meanings");
+  }
+  
 }

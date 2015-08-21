@@ -3,21 +3,19 @@
 <h3>Words that will enhance your mediocre existence.</h3>
 
 #if($word)
-  <h4>Words of the Week</h4>
+  #foreach($word in $words)
+    <ol>
+    <a href="/word/$word.getId()">$word.getName()</a>
+    </ol>
+  #end
 #else
   <p></p>
 #end
 
-#foreach($word in $words)
-  <ol>
-  <a href="/word/$word.getId()">$word.getName()</a>
-  </ol>
-#end
-
 <form action='/word' method='post'>
   <div class="form-group">
-    <input id="newWord" name="newWord" class="form-control" type="text">
+    <input id="newWord" name="newWord" class="form-control" type="text" required="true" placeholder="Add a new word">
   </div>
 
-      <button type="submit" class="btn btn-info">Click to add word</button>
+      <button type="submit" class="btn btn-info">Click to submit</button>
 </form>

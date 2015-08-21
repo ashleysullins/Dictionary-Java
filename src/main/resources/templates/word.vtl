@@ -4,19 +4,21 @@
   <h2> Word not found in the Suburban Dictionary! Want to <a href="/">add it</a>? </h2>
 #end
 
-#if($definition)
-  #foreach( $definition in $word.getDefinitions() )
-    <h3>$definition.getInformation()</a></h3>
-  #end
-#else
-    <p>There's no definition for this word yet! Add one below.</p>
+#foreach( $definition in $word.getDefinitions() )
+    <h3><a href="/definition/$definition.getId()">$definition.getInformation()</a></h3>
 #end
+
+<h4>Tell me what this word means to you.</h4>
   
 <form action='/definition' method='post'>
+  <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
+  
   <div class="form-group">
-    <input id="newDefinition" name="newDefinition" class="form-control" type="text">
+    <textarea id="newDefinition" name="newDefinition" class="form-control" required="true" rows="3" placeholder="Add your definition here"></textarea>
   </div>
-      <button type="submit" class="btn btn-info">Click to add Definition</button>
+  
+    <button type="submit" class="btn btn-info">Click to submit</button>
+      
 </form>    
 
 

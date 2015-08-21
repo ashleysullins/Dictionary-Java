@@ -1,16 +1,16 @@
 import java.util.ArrayList;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Definition {
   private static ArrayList<Definition> occurence = new ArrayList<Definition>();
   private String mInformation;
   private int mId;
-  private LocalDateTime mCreatedAt;
+  private LocalDate mCreatedAt;
 
   public Definition(String information) {
     mInformation = information;
     occurence.add(this);
-    mCreatedAt = LocalDateTime.now();
+    mCreatedAt = LocalDate.now();
     mId = occurence.size();
   }
 
@@ -22,7 +22,7 @@ public class Definition {
     return mId;
   }
 
-  public LocalDateTime getCreatedAt() {
+  public LocalDate getCreatedAt() {
   return mCreatedAt;
   }
 
