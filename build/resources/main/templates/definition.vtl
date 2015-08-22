@@ -1,0 +1,10 @@
+<h1>Definition</h1>
+
+#if ($definition)
+  <h3>$definition.getInformation()</a></h3>
+  <p>Date Added: $definition.getCreatedAt()</p>
+#else
+  <h4>There's no definition for this word yet! Would you like to <a href="/">add one?</a></h4>
+#end
+
+<a class="btn btn-primary" href="/" role="button">Go Back to Dictionary</a>

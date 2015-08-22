@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WordTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2015-08-22T04:48:35" hostname="Ashleys-MacBook-Pro.local" time="0.007">
+  <properties/>
+  <testcase name="find_returnsWordWithSameId_secondWord" classname="WordTest" time="0.0"/>
+  <testcase name="Word_instantiatesWithName_true" classname="WordTest" time="0.0"/>
+  <testcase name="Word_instantiatesCorrectly_true" classname="WordTest" time="0.001"/>
+  <testcase name="clear_emptiesAllWordsFromArrayList" classname="WordTest" time="0.0"/>
+  <testcase name="newId_WordInstantiateWithAnID_true" classname="WordTest" time="0.0"/>
+  <testcase name="getDefinitions_initiallyReturnsEmptyArrayList" classname="WordTest" time="0.0"/>
+  <testcase name="find_returnsNullWhenNoWordFound_null" classname="WordTest" time="0.001"/>
+  <testcase name="all_returnsAllInstancesOfWord_true" classname="WordTest" time="0.0"/>
+  <testcase name="addDefinition_addsDefinitionToWord" classname="WordTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,2 +1,2 @@
 :::term
-web: ./build/install/Dictionary-java/bin/Dictionary-java
+web: /build/install/Dictionary-java/bin/Dictionary-java

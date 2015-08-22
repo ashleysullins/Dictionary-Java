@@ -1,0 +1,26 @@
+<h1>Suburban Dictionary</h1>
+
+<div class="alert alert-success">
+  <a href="/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  You've successfully added a new word. Way to be productive!
+</div>
+
+<h3>Words that will enhance your mediocre existence.</h3>
+
+#if($word)
+  #foreach($word in $words)
+    <ol>
+    <a href="/word/$word.getId()">$word.getName()</a>
+    </ol>
+  #end
+#else
+  <p></p>
+#end
+
+<form action='/word' method='post'>
+  <div class="form-group">
+    <input id="newWord" name="newWord" class="form-control" type="text" required="true" placeholder="Add a new word">
+  </div>
+
+  <button type="submit" class="btn btn-info">Click to submit</button>
+</form>
