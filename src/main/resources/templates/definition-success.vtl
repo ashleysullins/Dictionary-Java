@@ -8,12 +8,15 @@
   You've successfully added a new definition. Props to you!
 </div>
 
-#foreach( $definition in $word.getDefinitions() )
-  <h3>What's does $word.getName() mean anyway?</h3>
-  <h4><a href="/definition/$definition.getId()">$definition.getInformation()</a></h4>
+#if($definition)
+  <h3>What does $word.getName() mean anyway?</h3>
+#else
+  <h4>Tell me what this word means to you.</h4>
 #end
 
-<h4>Tell me what this word means to you.</h4>
+#foreach( $definition in $word.getDefinitions() )
+  <h4><a href="/definition/$definition.getId()">$definition.getInformation()</a></h4>
+#end
 
 <form action='/definition' method='post'>
   <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
