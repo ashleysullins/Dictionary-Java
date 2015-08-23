@@ -2,6 +2,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 archivesBaseName = "Dictionary-java"
+applicationName = "Dictionary-java"
 version = '1.0'
 mainClassName = "App"
 
@@ -39,4 +40,5 @@ heroku {
     appName = 'dictionary-java'
 }
 
+defaultTasks = ['clean']
 task stage(dependsOn: ['clean', 'installApp'])
