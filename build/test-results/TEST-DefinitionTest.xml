@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DefinitionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-08-22T04:48:35" hostname="Ashleys-MacBook-Pro.local" time="0.036">
+<testsuite name="DefinitionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-08-23T19:32:44" hostname="Ashleys-MacBook-Pro.local" time="0.064">
   <properties/>
-  <testcase name="getId_returnsDefinitionId" classname="DefinitionTest" time="0.032"/>
-  <testcase name="getInformation_returnsInformation_true" classname="DefinitionTest" time="0.0"/>
-  <testcase name="find_returnsDefinitionWithSameId" classname="DefinitionTest" time="0.0"/>
+  <testcase name="getId_returnsDefinitionId" classname="DefinitionTest" time="0.057"/>
+  <testcase name="getInformation_returnsInformation_true" classname="DefinitionTest" time="0.001"/>
+  <testcase name="find_returnsDefinitionWithSameId" classname="DefinitionTest" time="0.001"/>
   <testcase name="clear_removesAllDefinitionInstancesFromMemory" classname="DefinitionTest" time="0.0"/>
   <testcase name="getCreateAt_instantiatesWithCurrentTime_today" classname="DefinitionTest" time="0.0"/>
   <testcase name="all_returnsAllInstancesOfTask_true" classname="DefinitionTest" time="0.0"/>

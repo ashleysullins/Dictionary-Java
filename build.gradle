@@ -11,10 +11,12 @@ buildscript {
       mavenCentral()
         maven {
           url "http://dl.bintray.com/vermeulen-mp/gradle-plugins"
+          url "https://plugins.gradle.org/m2/"
         }
     }
     dependencies {
         classpath 'com.wiredforcode:gradle-heroku-plugin:1.0.0'
+        classpath "pl.allegro.tech.build:newrelic-gradle-plugin:0.1.1"
     }
 }
 
@@ -42,3 +44,11 @@ heroku {
 
 defaultTasks = ['clean']
 task stage(dependsOn: ['clean', 'installApp'])
+
+apply plugin: "pl.allegro.tech.build.newrelic-gradle-plugin"
+
+newrelic {
+    licenseKey '#e9a74965a6bf5bd7a4ade3c39098bbd646e6b5da' //required - newrelic account key
+    version '3.14.0' //optional - default '3.14.0'
+    name 'AwesomeApp' // optional - module name by default
+}
