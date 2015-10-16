@@ -50,5 +50,9 @@ apply plugin: "pl.allegro.tech.build.newrelic-gradle-plugin"
 newrelic {
     licenseKey '#e9a74965a6bf5bd7a4ade3c39098bbd646e6b5da' //required - newrelic account key
     version '3.14.0' //optional - default '3.14.0'
-    name 'AwesomeApp' // optional - module name by default
+    name 'dictionary-java' // optional - module name by default
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
 }
