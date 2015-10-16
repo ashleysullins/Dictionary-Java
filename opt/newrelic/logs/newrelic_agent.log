@@ -1,0 +1,26 @@
+Oct 15, 2015 20:03:13 -0700 [799 1] com.newrelic INFO: Writing to New Relic log file: /Users/ashleysullins/Desktop/codeSchoolProjects/Dictionary-java/opt/newrelic/logs/newrelic_agent.log
+Oct 15, 2015 20:03:13 -0700 [799 1] com.newrelic INFO: JRE vendor Oracle Corporation version 1.8.0_51
+Oct 15, 2015 20:03:13 -0700 [799 1] com.newrelic INFO: JVM vendor Oracle Corporation Java HotSpot(TM) 64-Bit Server VM version 25.51-b03
+Oct 15, 2015 20:03:13 -0700 [799 1] com.newrelic INFO: OS Mac OS X version 10.10.4 arch x86_64
+Oct 15, 2015 20:03:13 -0700 [799 1] com.newrelic INFO: Agent Host: Ashleys-MBP.domain IP: 192.168.0.3
+Oct 15, 2015 20:03:13 -0700 [799 1] com.newrelic INFO: New Relic Agent v3.14.0 is initializing...
+Oct 15, 2015 20:03:20 -0700 [799 1] com.newrelic.instrumentation.grails-async-2.3 INFO: Disabled instrumentation "com.newrelic.instrumentation.grails-async-2.3"
+Oct 15, 2015 20:03:21 -0700 [799 1] com.newrelic.instrumentation.jcache-datastore-1.0.0 INFO: Disabled instrumentation "com.newrelic.instrumentation.jcache-datastore-1.0.0"
+Oct 15, 2015 20:03:22 -0700 [799 1] com.newrelic.instrumentation.servlet-user INFO: Disabled instrumentation "com.newrelic.instrumentation.servlet-user"
+Oct 15, 2015 20:03:22 -0700 [799 1] com.newrelic.instrumentation.spring-aop-2 INFO: Disabled instrumentation "com.newrelic.instrumentation.spring-aop-2"
+Oct 15, 2015 20:03:23 -0700 [799 1] com.newrelic.instrumentation.websphere-liberty-profile-dispatcher-8.5.5.5 ERROR: Unable to load file:/Users/ashleysullins/Desktop/codeSchoolProjects/Dictionary-java/opt/newrelic/newrelic.jar!/instrumentation/websphere-liberty-profile-dispatcher-8.5.5.5-1.0.jar : Weave instrumentation constructors must not invoke com.newrelic.api.agent.weaver.Weaver.callOriginal()Ljava/lang/Object;
+Oct 15, 2015 20:03:31 -0700 [799 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+Oct 15, 2015 20:03:31 -0700 [799 1] com.newrelic INFO: Setting audit_mode to false
+Oct 15, 2015 20:03:31 -0700 [799 1] com.newrelic INFO: Setting protocol to "https"
+Oct 15, 2015 20:03:33 -0700 [799 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /Users/ashleysullins/Desktop/codeSchoolProjects/Dictionary-java/opt/newrelic/./newrelic.yml
+Oct 15, 2015 20:03:33 -0700 [799 1] com.newrelic INFO: New Relic Agent v3.14.0 has started
+Oct 15, 2015 20:03:33 -0700 [799 1] com.newrelic INFO: Agent class loader: sun.misc.Launcher$AppClassLoader@14dad5dc
+Oct 15, 2015 20:03:38 -0700 [799 10] com.newrelic INFO: Display host name is Ashleys-MBP.domain for application Dictionary-java
+Oct 15, 2015 20:03:40 -0700 [799 10] com.newrelic INFO: Collector redirection to collector-148.newrelic.com:443
+Oct 15, 2015 20:03:40 -0700 [799 10] com.newrelic INFO: Agent run id: 41740198096277498
+Oct 15, 2015 20:03:40 -0700 [799 10] com.newrelic INFO: Agent 799@Ashleys-MBP.domain/Dictionary-java connected to collector.newrelic.com:443
+Oct 15, 2015 20:03:40 -0700 [799 10] com.newrelic INFO: Reporting to: https://rpm.newrelic.com/accounts/1116535/applications/9718395
+Oct 15, 2015 20:03:40 -0700 [799 10] com.newrelic INFO: Using RUM version 686 for application "Dictionary-java"
+Oct 15, 2015 20:03:40 -0700 [799 10] com.newrelic INFO: Real user monitoring is enabled with auto instrumentation for application "Dictionary-java"
+Oct 15, 2015 20:03:56 -0700 [799 5] com.newrelic.agent.Agent INFO: JVM is shutting down
+Oct 15, 2015 20:03:57 -0700 [799 5] com.newrelic.agent.Agent INFO: New Relic Agent has shutdown
